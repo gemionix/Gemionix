@@ -72,11 +72,6 @@
     transform: translateY(-8px);
     box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
   }
-
-
-
-
-
 </Style>
 
 
@@ -155,6 +150,24 @@
     </div>
 </div>
         <!-- Welcome Section End -->
+
+
+  <!-- Gemiogen AI Generator Section -->
+<div class="container text-center text-white mt-5 p-4" style="background-color: rgba(0,0,0,0.6); border-radius: 12px;">
+  <h2 class="mb-3 text-warning">✨ Try Gemiogen AI</h2>
+  <p class="text-light">Generate stunning AI images instantly with <b>Gemionix</b>.</p>
+
+  <!-- Input + Button -->
+  <div class="d-flex justify-content-center mb-3">
+    <input id="prompt" type="text" class="form-control w-50 me-2" placeholder="Enter your prompt...">
+    <button class="btn btn-warning" onclick="generateImage()">Generate</button>
+  </div>
+
+  <!-- Output Area -->
+  <div id="output" class="mt-4">
+    <p class="text-muted">Your generated image will appear here...</p>
+  </div>
+</div>
 
 <hr class="text-dark">
         
@@ -347,9 +360,56 @@
   });
 
 </script>
+
+
+  <script>
+  const promptInput = document.getElementById("prompt");
+  const outputDiv = document.getElementById("output");
+
+  // Allow Enter key to also trigger generation
+  promptInput.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      generateImage();
+    }
+  });
+
+  async function generateImage() {
+    const prompt = promptInput.value.trim();
+    if (!prompt) {
+      alert("⚠️ Please enter a prompt first!");
+      return;
+    }
+
+    outputDiv.innerHTML = "<p class='text-info'>⏳ Generating image, please wait...</p>";
+
+    try {
+      const response = await fetch("http://localhost:5000/api/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt })
+      });
+
+      if (!response.ok) throw new Error("Failed to generate image");
+
+      const result = await response.json();
+
+      // Agar result Hugging Face Space ka hua
+      if (result.data && result.data[0]) {
+        outputDiv.innerHTML = `<img src="data:image/png;base64,${result.data[0]}" class="img-fluid rounded shadow">`;
+      } else {
+        outputDiv.innerHTML = `<p class="text-danger">❌ Generation failed. Check server logs.</p>`;
+      }
+
+    } catch (err) {
+      console.error(err);
+      outputDiv.innerHTML = `<p class="text-danger">⚠️ Error: ${err.message}</p>`;
+    }
+  }
+</script>
 </body>
 
 <body>
   
 </body>
+
 </html>
