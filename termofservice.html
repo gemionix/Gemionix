@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gemionix-Terms of Service</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Load the Tailwind CDN script -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    /* Sidebar Transition */
+    #sidebar {
+
+      transition: left 0.3s ease-in-out;
+    }
+    /* Hide scrollbar but keep scrolling  */
+    #sidebar::-webkit-scrollbar {
+      display: none;
+    }
+    #sidebar {
+      -ms-overflow-style: none;  
+      scrollbar-width: none;     
+      overflow-y: auto;          
+    }
+    /* Custom class to lock body scroll when sidebar is open */
+    .overflow-hidden-scroll-lock {
+        overflow: hidden !important;
+    }
+
+    /* Footer Styling */
+.footer {
+  background-color: #0f172a; 
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #bfcfff; 
+}
+
+.footer-logo span {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.footer-links {
+  margin: 15px 0;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #bfcfff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  font-size: 14px;
+  color: #a0aec0;
+  margin-top: 20px;
+}
+
+  </style>
+</head>
+<!-- Body is white with dark text -->
+<body class="text-gray-900 bg-gray-100 min-h-screen">
+
+  <!-- Navbar (Fixed) -->
+  <nav class="flex items-center justify-between bg-gray-900 px-4 py-3 shadow-xl fixed w-full top-0 z-50 ">
+    <div class="flex items-center space-x-3">
+      
+        <!-- Hamburger Button -->
+      <button id="menu-btn" class="text-white text-2xl focus:outline-none p-1 rounded-md hover:bg-gray-800 transition">
+        <i class="bi bi-list"></i>
+      </button>
+      
+      <!-- Logo + Brand -->
+      <img src="./logo/Gemionix Logo - tm.jpg" alt="Gemionix Logo" class="w-9 h-9 rounded-lg">
+    <a href="./index.html#home" class="text-white font-semibold tracking-wider  hover:text-gray-300 transition">
+    Gemionix™
+    </a>
+  </nav>
+
+  
+  <!-- Sidebar / Drawer -->
+  <aside id="sidebar" class="fixed top-0 left-[-260px] w-64 h-full bg-gray-900 shadow-2xl z-50 p-4 flex flex-col">
+
+    <!-- Sidebar Header: Logo and Close Button -->
+    <div class="flex items-center justify-between mb-6 border-b border-gray-800 pb-4 flex-shrink-0">
+      <div class="flex items-center space-x-2">
+        <img src="./logo/Gemionix Logo - tm.jpg" alt="Logo" class="w-8 h-8 rounded-lg">
+        <span class="text-lg font-semibold text-white">Gemionix™</span>
+      </div>
+      <!-- Close Button  -->
+      <button id="close-btn" class="p-2 rounded-full text-white ">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Navigation links - flex-grow ensures this area takes up available space -->
+    <nav id="sidebar-nav" class="flex flex-col space-y-1 text-white flex-grow">
+      <a href="./index.html" class="px-3 py-2 rounded-lg hover:bg-gray-800 transition duration-150 font-medium">
+        <i class="bi bi-house-door mr-3"></i>Home
+      </a>
+
+      <!-- Tools Dropdown -->
+      <details class="group">
+        <summary class="cursor-pointer px-3 py-2 rounded-lg hover:bg-gray-800 flex justify-between items-center font-medium">
+          <span class="flex items-center"><i class="bi bi-wrench-adjustable-circle mr-3"></i>Tools</span>
+          <i class="bi bi-chevron-down transition-transform group-open:rotate-180"></i>
+        </summary>
+        <div class="pl-4 space-y-1 text-sm py-1">
+          <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">CV Maker</a>
+          
+          <details class="group">
+            <summary class="cursor-pointer px-3 py-1 rounded-lg hover:bg-gray-800 flex justify-between items-center">
+              PDF Tools <i class="bi bi-chevron-right transition-transform group-open:rotate-90"></i>
+            </summary>
+            <div class="pl-4 space-y-1">
+              <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">PDF Compressor</a>
+              <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">PDF to Word</a>
+              <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Word to PDF</a>
+              <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Image to PDF</a>
+            </div>
+          </details>
+
+          <details class="group">
+            <summary class="cursor-pointer px-3 py-1 rounded-lg hover:bg-gray-800 flex justify-between items-center">
+              Media Tool <i class="bi bi-chevron-right transition-transform group-open:rotate-90"></i>
+            </summary>
+            <div class="pl-4 space-y-1">
+              <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Image Compressor</a>
+              <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Passport Photo Maker</a>
+            </div>
+          </details>
+
+          <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">AI Prompt Generator</a>
+        </div>
+      </details>
+
+   
+      <!-- Calculator -->
+<details class="group">
+  <summary class="cursor-pointer px-3 py-2 rounded-lg hover:bg-gray-800 flex justify-between items-center font-medium">
+    <span class="flex items-center"><i class="bi bi-calculator mr-3"></i>Calculator</span>
+    <i class="bi bi-chevron-down transition-transform group-open:rotate-180"></i>
+  </summary>
+
+  <div class="pl-4 space-y-1 text-sm py-1">
+
+    <!-- Basic Calculators -->
+    <details class="group">
+      <summary class="cursor-pointer px-3 py-1 rounded-lg hover:bg-gray-800 flex justify-between items-center">
+        Basic Calculators <i class="bi bi-chevron-right transition-transform group-open:rotate-90"></i>
+      </summary>
+      <div class="pl-4 space-y-1">
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Simple Calculator</a>
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Scientific Calculator</a>
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Percentage Calculator</a>
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Age Calculator</a>
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Unit Converter</a>
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Matrix Calculator</a>
+      </div>
+    </details>
+
+    <!-- Financial Calculators -->
+    <details class="group">
+      <summary class="cursor-pointer px-3 py-1 rounded-lg hover:bg-gray-800 flex justify-between items-center">
+        Financial Calculators <i class="bi bi-chevron-right transition-transform group-open:rotate-90"></i>
+      </summary>
+      <div class="pl-4 space-y-1">
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Loan / EMI Calculator</a>
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Compound Interest Calculator</a>
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Simple Interest Calculator</a>
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">GST / Tax Calculator</a>
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Currency Converter</a>
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Tip Calculator</a>
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Savings Goal Calculator</a>
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Budget Calculator</a>
+      </div>
+    </details>
+
+    <!-- Utility Calculators -->
+    <details class="group">
+      <summary class="cursor-pointer px-3 py-1 rounded-lg hover:bg-gray-800 flex justify-between items-center">
+        Utility Calculators <i class="bi bi-chevron-right transition-transform group-open:rotate-90"></i>
+      </summary>
+      <div class="pl-4 space-y-1">
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">BMI Calculator</a>
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">BMR / Calorie Calculator</a>
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Water Intake Calculator</a>
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Carbon Footprint Calculator</a>
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">GPA / Grade Calculator</a>
+        <a href="#" class="block px-3 py-1 rounded-lg hover:bg-gray-800">Date / Time Difference Calculator</a>
+      </div>
+    </details>
+
+  </div>
+</details>
+
+
+      <a href="index.html#about" class="px-3 py-2 rounded-lg hover:bg-gray-800 transition duration-150 font-medium">
+        <i class="bi bi-info-circle mr-3"></i>About
+      </a>
+      <a href="index.html#contact" class="px-3 py-2 rounded-lg hover:bg-gray-800 transition duration-150 font-medium">
+        <i class="bi bi-telephone mr-3"></i>Contact
+      </a>
+    </nav>
+    
+    <!-- Utility Links (Stuck to the bottom of the sidebar) -->
+    <div class="pt-4 border-t border-gray-800 flex-shrink-0">
+        <a href="#" class="px-3 py-2 flex items-center space-x-2 rounded-lg hover:bg-gray-800 transition duration-150 font-medium">
+            <i class="bi bi-gear mr-3"></i>
+            <span>Settings</span>
+        </a>
+    </div>
+  </aside>
+
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-70 hidden z-30"></div>
+
+<!-- Terms of Service Section Start -->
+<section id="terms" class="pt-24 pb-16 px-6  text-gray-800 leading-relaxed">
+  <div class="container mx-auto px-6 md:px-12 lg:px-24 text-gray-800">
+    
+    <!-- Heading -->
+    <h2 class="text-3xl font-bold text-blue-600 mb-2 text-center">Terms of Service</h2>
+   
+    
+    <!-- Divider -->
+    <hr class="border-gray-300 w-16 mx-auto mb-8">
+
+    <!-- Content -->
+    <div class="bg-gray-50 rounded-2xl shadow-md p-8 leading-relaxed space-y-6">
+      
+      <p>Welcome to <strong>Gemionix™ - We Odia. We Innovate Badhiya.</strong> By accessing or using our website, you agree to comply with the following Terms of Service. Please read them carefully before using our platform.</p>
+
+      <h3 class="text-2xl font-semibold text-blue-700">1. Acceptance of Terms</h3>
+      <p>By using the Gemionix™ website, you acknowledge that you have read, understood, and agree to these Terms. If you do not agree, please do not use our website or services.</p>
+
+      <h3 class="text-2xl font-semibold text-blue-700">2. Services Provided</h3>
+      <p>Gemionix™ offers free digital tools and resources such as CV Makers, PDF Tools, Media Utilities, and more. These tools are provided “as is” for general use and informational purposes only.</p>
+
+      <h3 class="text-2xl font-semibold text-blue-700">3. User Responsibilities</h3>
+      <ul class="list-disc pl-8">
+        <li>You agree to use our services only for lawful purposes.</li>
+        <li>You shall not misuse or attempt to harm the website’s integrity or other users’ experience.</li>
+        <li>You are responsible for your own use and interpretation of any tool or resource provided.</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold text-blue-700">4. Intellectual Property</h3>
+      <p>All content, designs, graphics, and materials available on Gemionix™ are the property of Gemionix™ or its respective creators. Unauthorized use, reproduction, or redistribution is strictly prohibited.</p>
+
+      <h3 class="text-2xl font-semibold text-blue-700">5. Limitation of Liability</h3>
+      <p>Gemionix™ provides tools and resources on an “as available” basis. We do not guarantee accuracy, reliability, or uninterrupted service. We are not liable for any direct, indirect, or incidental damages arising from website use.</p>
+
+      <h3 class="text-2xl font-semibold text-blue-700">6. External Links</h3>
+      <p>Our website may include links to external websites. We do not control or endorse the content of these third-party websites and are not responsible for their terms or policies.</p>
+
+      <h3 class="text-2xl font-semibold text-blue-700">7. Changes to Terms</h3>
+      <p>Gemionix™ may modify or update these Terms of Service at any time. Updated versions will be posted on this page, and the new effective date will be mentioned above.</p>
+
+      <h3 class="text-2xl font-semibold text-blue-700">8. Contact Us</h3>
+      <p>If you have any questions regarding these Terms, please contact us at:</p>
+      <p class="font-semibold text-gray-700">📧 contact.gemionix@gmail.com</p>
+
+    </div>
+
+  </div>
+</section>
+<!-- Terms of Service Section End -->
+
+
+
+  <!-- Contact Section Start -->
+<section id="contact" class="py-12 ">
+  <div class="container mx-auto px-6 text-center ">
+    
+    <!-- Heading -->
+    <h2 class="text-3xl text-blue-600 font-bold mb-2">Contact Us</h2>
+    <p class="text-gray-500 mb-6">We’d love to hear from you. Get in touch!</p>
+    
+    <!-- hr tag -->
+    <hr class="border-gray-600 w-16 mx-auto mb-5">
+
+    <!-- Contact Details -->
+    <div class="flex flex-col md:flex-row items-center justify-center gap-8 text-lg">
+      
+      <!-- Email -->
+      <p class="flex items-center ">
+        
+        <span>
+          Email:
+          <a 
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=contact.gemionix@gmail.com&su=Hello%20Gemionix&body=I%20would%20like%20to%20connect%20with%20you."
+            target="_blank"
+            class="text-gray-500 hover:"
+          >
+            contact.gemionix@gmail.com
+          </a>  
+        </span>  
+      </p>
+
+      <!-- Social Links -->
+      <p class="flex items-center">
+        
+        <span>
+          Follow us:
+          <a href="https://www.instagram.com/gemionix/" target="_blank" class="text-gray-500 hover:underline">Instagram</a> ·
+          <a href="https://x.com/gemionix" target="_blank" class="text-gray-500 hover:underline">X</a> ·
+          <a href="https://www.youtube.com/channel/UC2DJGVLd1Xzuhm6pX45OAog" target="_blank" class="text-gray-500 hover:underline">YouTube</a> 
+          
+        </span>
+      </p>
+
+    </div>
+  </div>
+</section>
+<!-- Contact Section End -->
+
+ <hr class="bg-white">
+
+<!-- Footer Section Start-->
+<footer class="footer">
+  <div class="footer-logo">
+    <h2><span>Gemionix</span> ™</h2>
+  </div>
+  
+  <div class="footer-links">
+    <a href="./privacypolicy.html">Privacy Policy</a>
+    <a href="./termofservice.html">Terms of Service</a>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>© 2025 Gemionix ™. All Rights Reserved.</p>
+  </div>
+</footer>
+<!-- Footer Section End -->
+
+  <!-- JavaScript -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const sidebar = document.getElementById('sidebar');
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const overlay = document.getElementById('overlay');
+    const body = document.body;
+    const navLinks = document.querySelectorAll('#sidebar nav a');
+
+    function openSidebar() {
+      sidebar.style.left = '0';
+      overlay.classList.remove('hidden');
+      body.classList.add('overflow-hidden-scroll-lock'); 
+    }
+
+    function closeSidebar() {
+      sidebar.style.left = '-260px';
+      overlay.classList.add('hidden');
+      body.classList.remove('overflow-hidden-scroll-lock');
+    }
+
+    // Attach event listeners
+    menuBtn?.addEventListener('click', openSidebar);
+    closeBtn?.addEventListener('click', closeSidebar);
+    overlay?.addEventListener('click', closeSidebar);
+    navLinks.forEach(link => {
+      link.addEventListener('click', closeSidebar);
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeSidebar();
+});
+
+</script>
+
+</body>
+</html>
