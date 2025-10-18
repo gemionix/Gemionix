@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Workspace-inspired blue and white hero banner">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2da0ff"/>
+      <stop offset="100%" stop-color="#0a68d6"/>
+    </linearGradient>
+
+    <radialGradient id="spot" cx="0.75" cy="0.25" r="0.8">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Soft white blur for floating icons -->
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Tablet/laptop shadow -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="16" stdDeviation="28" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)"/>
+  <rect width="100%" height="100%" fill="url(#spot)" />
+
+  <!-- Subtle abstract shapes -->
+  <g opacity="0.08" fill="#ffffff">
+    <ellipse cx="400" cy="220" rx="360" ry="160" />
+    <ellipse cx="1500" cy="820" rx="420" ry="200" />
+  </g>
+
+  <!-- Faint chart icon in background -->
+  <g transform="translate(1550,140)" opacity="0.06" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="0" cy="0" r="60" transform="translate(0,60)" />
+    <path d="M -10 20 L 10 0 L 40 30" />
+  </g>
+
+  <!-- Floating document icon (left) -->
+  <g transform="translate(160,300)" opacity="0.95">
+    <rect x="0" y="0" width="160" height="200" rx="12" fill="#ffffff" fill-opacity="0.9" />
+    <path d="M120 0 L140 20 L120 20 Z" fill="#ffffff" fill-opacity="0.95"/>
+    <rect x="22" y="36" width="116" height="10" rx="4" fill="#0a68d6" fill-opacity="0.15"/>
+    <rect x="22" y="58" width="86" height="8" rx="4" fill="#0a68d6" fill-opacity="0.12"/>
+    <rect x="22" y="78" width="96" height="8" rx="4" fill="#0a68d6" fill-opacity="0.12"/>
+  </g>
+
+  <!-- Floating PDF icon (top-right) -->
+  <g transform="translate(1320,160)" opacity="0.95">
+    <rect x="0" y="0" width="140" height="190" rx="12" fill="#ffffff" fill-opacity="0.95"/>
+    <rect x="18" y="18" width="104" height="36" rx="8" fill="#2da0ff" />
+    <text x="80" y="43" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" alignment-baseline="middle">PDF</text>
+    <rect x="22" y="70" width="96" height="8" rx="4" fill="#0a68d6" fill-opacity="0.12"/>
+    <rect x="22" y="90" width="66" height="8" rx="4" fill="#0a68d6" fill-opacity="0.12"/>
+  </g>
+
+  <!-- Floating image icon (right-center) -->
+  <g transform="translate(1530,460)" opacity="0.85" filter="url(#softGlow)">
+    <rect x="0" y="0" width="120" height="120" rx="14" fill="#ffffff" fill-opacity="0.12"/>
+    <path d="M16 88 L44 56 L72 88 L104 52 L104 96 L16 96 Z" fill="#ffffff" fill-opacity="0.22"/>
+    <circle cx="26" cy="30" r="8" fill="#ffffff" fill-opacity="0.6"/>
+  </g>
+
+  <!-- Floating calculator icon (left-bottom) -->
+  <g transform="translate(220,700)" opacity="0.85" filter="url(#softGlow)">
+    <rect x="0" y="0" width="110" height="140" rx="14" fill="#ffffff" fill-opacity="0.12"/>
+    <rect x="14" y="18" width="82" height="22" rx="6" fill="#ffffff" fill-opacity="0.18"/>
+    <!-- keypad -->
+    <g transform="translate(20,56)" fill="#ffffff" fill-opacity="0.18">
+      <rect x="0" y="0" width="20" height="20" rx="4"/>
+      <rect x="28" y="0" width="20" height="20" rx="4"/>
+      <rect x="56" y="0" width="20" height="20" rx="4"/>
+      <rect x="0" y="28" width="20" height="20" rx="4"/>
+      <rect x="28" y="28" width="20" height="20" rx="4"/>
+      <rect x="56" y="28" width="20" height="20" rx="4"/>
+      <rect x="0" y="56" width="76" height="18" rx="6"/>
+    </g>
+  </g>
+
+  <!-- Center laptop illustration -->
+  <g transform="translate(460,300)">
+    <!-- base shadow -->
+    <ellipse cx="480" cy="520" rx="320" ry="38" fill="#000" opacity="0.15"/>
+    <!-- laptop deck -->
+    <g filter="url(#shadow)">
+      <rect x="80" y="260" width="760" height="30" rx="10" fill="#ffffff" fill-opacity="0.96"/>
+      <!-- keyboard area -->
+      <rect x="110" y="170" width="700" height="230" rx="14" fill="#ffffff" fill-opacity="0.98"/>
+      <!-- screen -->
+      <rect x="160" y="20" width="620" height="360" rx="10" fill="#0a68d6" />
+      <!-- inner screen dark -->
+      <rect x="176" y="36" width="588" height="328" rx="8" fill="#1f86e8"/>
+      <!-- trackpad -->
+      <rect x="420" y="338" width="200" height="56" rx="8" fill="#f0f6ff" fill-opacity="0.9"/>
+      <!-- keys (simplified) -->
+      <g transform="translate(150,210)" fill="#2da0ff" fill-opacity="0.22">
+        <!-- generate rows of keys -->
+        <rect x="0" y="0" width="56" height="22" rx="5"/>
+        <rect x="66" y="0" width="56" height="22" rx="5"/>
+        <rect x="132" y="0" width="56" height="22" rx="5"/>
+        <rect x="198" y="0" width="56" height="22" rx="5"/>
+        <rect x="264" y="0" width="56" height="22" rx="5"/>
+        <rect x="330" y="0" width="56" height="22" rx="5"/>
+
+        <rect x="0" y="30" width="56" height="22" rx="5"/>
+        <rect x="66" y="30" width="56" height="22" rx="5"/>
+        <rect x="132" y="30" width="56" height="22" rx="5"/>
+        <rect x="198" y="30" width="56" height="22" rx="5"/>
+        <rect x="264" y="30" width="56" height="22" rx="5"/>
+        <rect x="330" y="30" width="56" height="22" rx="5"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Subtle connecting lines between elements -->
+  <g stroke="#ffffff" stroke-opacity="0.08" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M300 420 Q600 340 880 360" />
+    <path d="M1120 340 Q1360 380 1500 460" />
+  </g>
+
+  <!-- A couple of decorative arrows/analytics tick -->
+  <g stroke="#ffffff" stroke-opacity="0.07" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1400 960 L1430 930 L1460 960" />
+    <path d="M1460 960 L1460 900" />
+  </g>
+</svg>
