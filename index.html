@@ -74,26 +74,56 @@
   .service-icon { width: 40px; height: 40px; font-size: 18px; }
 }
 
+/* ===== NAV MOBILE FIX ===== */
+@media (max-width: 900px) {
+  nav {
+    flex-wrap: nowrap;
+    height: 60px;
+    padding: 0 4%;
+  }
+  .nav-links { gap: 14px; }
+  .nav-links a { font-size: 13px; }
+  .logo { font-size: 14px; gap: 6px; }
+  .logo-icon { width: 30px; height: 30px; font-size: 15px; }
+  .logo-sub { display: none; } /* tagline hero me already hai, yaha space bacha rahe */
+}
+
+@media (max-width: 400px) {
+  .nav-links { gap: 8px; }
+  .nav-links a { font-size: 11px; }
+  .logo { font-size: 12px; }
+  .logo-icon { width: 26px; height: 26px; font-size: 13px; }
+}
+
+/* ===== HERO MOBILE FIX (fixed pixel height approach) ===== */
 @media (max-width: 900px) {
   .hero {
-    background-size: 90% auto;
-    background-position: center 92%;
+    grid-template-columns: 1fr;
+    background-repeat: no-repeat;
+    background-size: auto 300px;
+    background-position: center bottom 10px;
     padding-top: 90px;
-    padding-bottom: 340px; /* image ke liye space chhod rahe niche */
+    padding-bottom: 330px;
     min-height: auto;
   }
   .hero-content { margin-top: 0; }
-  .hero::before { display: none; } /* wo radial blob bhi hata diya, clutter kam hoga */
+  .hero::before { display: none; }
 }
 
 @media (max-width: 600px) {
   .hero {
-    background-size: 100% auto;
-    background-position: center bottom;
-    padding-bottom: 260px;
+    background-size: auto 220px;
+    padding-bottom: 250px;
+    padding-top: 80px;
   }
-  .hero h1 { margin-bottom: 14px; }
-  .hero-sub { margin-bottom: 24px; }
+  .hero h1 { font-size: 30px; margin-bottom: 14px; }
+  .hero-sub { font-size: 14px; margin-bottom: 24px; }
+  .btn { padding: 12px 22px; font-size: 14px; }
+}
+
+@media (max-width: 400px) {
+  .hero { background-size: auto 190px; padding-bottom: 210px; }
+  .hero h1 { font-size: 26px; }
 }
 
  
