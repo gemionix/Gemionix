@@ -7,6 +7,76 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <style>
+/* ===== EXTRA MOBILE FIXES (Gemionix) ===== */
+
+@media (max-width: 900px) {
+  /* Nav thoda breathing space de rahe */
+  nav { flex-wrap: wrap; height: auto; padding: 12px 5%; row-gap: 8px; }
+  .nav-links { gap: 18px; flex-wrap: wrap; justify-content: center; }
+
+  /* Service card padding fix - text ab pura width use karega */
+  .service-card, .card {
+    padding: 26px 24px !important;
+    min-height: auto;
+  }
+  .card-illustration { opacity: 0.06; width: 130px; height: 130px; font-size: 90px; }
+
+  /* About visual quote box ko safe rakho */
+  .about-visual { padding: 24px 16px; min-height: 340px; }
+  .quote-box {
+    position: static;
+    max-width: 100%;
+    margin-top: 16px;
+  }
+
+  .hero { padding-top: 90px; }
+}
+
+@media (max-width: 600px) {
+  .logo { font-size: 15px; gap: 6px; }
+  .logo-icon { width: 32px; height: 32px; font-size: 16px; }
+  .logo-sub { font-size: 9px; }
+
+  .hero-eyebrow { font-size: 11px; }
+  .hero h1 { font-size: 30px; }
+  .hero-sub { font-size: 14px; }
+  .btn { padding: 12px 22px; font-size: 14px; }
+
+  .stats { gap: 18px; justify-content: flex-start; }
+  .stat-num { font-size: 16px; }
+  .stat-label { font-size: 10px; }
+
+  .service-card { min-height: auto; padding: 22px 20px !important; }
+  .service-card h3 { font-size: 17px; }
+  .service-card p { font-size: 13px; }
+
+  .about h2 { font-size: 24px; }
+  .about p { font-size: 14px; }
+  .about-pillars { gap: 16px; flex-wrap: wrap; }
+
+  .footer-grid { gap: 32px; }
+  .contact-item {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .chat-bubble {
+    bottom: 16px; right: 16px;
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero h1 { font-size: 26px; }
+  .nav-links { gap: 12px; }
+  .nav-links a { font-size: 13px; }
+  .service-icon { width: 40px; height: 40px; font-size: 18px; }
+}
+
+
+
+ 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
