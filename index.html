@@ -1167,12 +1167,13 @@ SOON
 <script>
   // Smooth active nav highlight on scroll
   const sections = document.querySelectorAll('section[id], footer[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
+  const navItems = document.querySelectorAll('.nav-links a');
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        navLinks.forEach(a => a.classList.remove('active'));
+        navItems.forEach(a => a.classList.remove('active'));
+
         const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
         if (active) active.classList.add('active');
       }
@@ -1181,8 +1182,10 @@ SOON
 
   sections.forEach(s => observer.observe(s));
 
+
   // Fade-in on scroll
   const cards = document.querySelectorAll('.service-card, .team-card, .stat-item');
+
   cards.forEach((el, i) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(24px)';
@@ -1199,24 +1202,25 @@ SOON
   }, { threshold: 0.1 });
 
   cards.forEach(c => cardObserver.observe(c));
-</script>
 
-  <script>
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-const navLinks = document.getElementById('navLinks');
 
-hamburgerBtn.addEventListener('click', () => {
-  hamburgerBtn.classList.toggle('open');
-  navLinks.classList.toggle('open');
-});
+  // Hamburger Menu
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileNav = document.getElementById('navLinks');
 
-// Menu link click karne pe menu band ho jaye
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburgerBtn.classList.remove('open');
-    navLinks.classList.remove('open');
+  hamburgerBtn.addEventListener('click', () => {
+    hamburgerBtn.classList.toggle('open');
+    mobileNav.classList.toggle('open');
   });
-});
-  </script>
+
+
+  // Menu link click karne pe menu band ho jaye
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburgerBtn.classList.remove('open');
+      mobileNav.classList.remove('open');
+    });
+  });
+</script>
 </body>
 </html>
